@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bll\ClienteBll.cs" />
+    <Compile Include="Bll\CobradorBll.cs" />
+    <Compile Include="Bll\PrestamoBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

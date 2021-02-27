@@ -14,7 +14,19 @@ namespace Pagadiario.Modelos.Modelos
         public double Interes { get; set; }
         public string FormaPago { get; set; }
         public DateTime FechaLimite { get; set; }
-        public double TotalPagar { get; set; }
+
+        double totalPagar;
+        public double TotalPagar 
+        {
+            get 
+            {
+                return totalPagar;
+            }
+            set
+            {
+                totalPagar = Monto + (Monto * (Interes / 100));
+            }
+        }
         public string Notas { get; set; }
         public bool Activo { get; set; }        
         public int ClienteId { get; set; }  

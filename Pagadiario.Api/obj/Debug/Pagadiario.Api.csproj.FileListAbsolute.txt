@@ -188,3 +188,7 @@ D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Api\obj\Debug\Pagadiario.Api.csp
 D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Api\obj\Debug\Pagadiario.Api.csproj.CopyComplete
 D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Api\obj\Debug\Pagadiario.Api.dll
 D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Api\obj\Debug\Pagadiario.Api.pdb
+D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Api\bin\Pagadiario.Datos.dll
+D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Api\bin\Dapper.dll
+D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Api\bin\Pagadiario.Datos.pdb
+D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Api\bin\Dapper.xml

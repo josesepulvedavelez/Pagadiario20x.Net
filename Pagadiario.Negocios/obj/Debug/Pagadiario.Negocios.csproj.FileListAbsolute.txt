@@ -22,3 +22,5 @@ D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Negocios\obj\Debug\Pagadiario.Ne
 D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Negocios\obj\Debug\Pagadiario.Negocios.csproj.CopyComplete
 D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Negocios\obj\Debug\Pagadiario.Negocios.dll
 D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Negocios\obj\Debug\Pagadiario.Negocios.pdb
+D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Negocios\bin\Debug\Dapper.dll
+D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Negocios\bin\Debug\Dapper.xml

@@ -41,14 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\PrestamoDto.cs" />
     <Compile Include="Modelos\ClienteModel.cs" />
     <Compile Include="Modelos\CobradorModel.cs" />
     <Compile Include="Modelos\PagoModel.cs" />
     <Compile Include="Modelos\PrestamoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dtos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

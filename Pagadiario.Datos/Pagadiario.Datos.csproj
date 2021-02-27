@@ -45,6 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dal\ClienteDal.cs" />
+    <Compile Include="Dal\CobradorDal.cs" />
+    <Compile Include="Dal\PagoDal.cs" />
+    <Compile Include="Dal\PrestamoDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -56,5 +60,6 @@
       <Name>Pagadiario.Modelos</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
