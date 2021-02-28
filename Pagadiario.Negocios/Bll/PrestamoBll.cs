@@ -31,5 +31,13 @@ namespace Pagadiario.Negocios.Bll
             return result;
         }
 
+        public int Actualizar(PrestamoModel prestamoModel)
+        {
+            prestamoDal = new PrestamoDal();
+            result = prestamoDal.Actualizar(prestamoModel);
+
+            return result;
+        }
+
     }
 }

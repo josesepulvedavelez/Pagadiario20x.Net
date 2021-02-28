@@ -13,6 +13,7 @@ namespace Pagadiario.Modelos.Dtos
         public string Telefono { get; set; }
         public string Celular { get; set; }
         public string Direccion { get; set; }
+        public int PrestamoId { get; set; }
         public string No { get; set; }
         public DateTime Fecha { get; set; }
         public DateTime FechaLimite { get; set; }

@@ -6,7 +6,6 @@ D:\Personal\Pagadiario.Net\Pagadiario.Modelos\obj\Debug\Pagadiario.Modelos.dll
 D:\Personal\Pagadiario.Net\Pagadiario.Modelos\obj\Debug\Pagadiario.Modelos.pdb
 D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Modelos\bin\Debug\Pagadiario.Modelos.dll
 D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Modelos\bin\Debug\Pagadiario.Modelos.pdb
-D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Modelos\obj\Debug\Pagadiario.Modelos.csprojAssemblyReference.cache
 D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Modelos\obj\Debug\Pagadiario.Modelos.csproj.CoreCompileInputs.cache
 D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Modelos\obj\Debug\Pagadiario.Modelos.dll
 D:\Personal\GitHub\Pagadiario20x.Net\Pagadiario.Modelos\obj\Debug\Pagadiario.Modelos.pdb

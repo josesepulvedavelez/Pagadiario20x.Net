@@ -110,6 +110,7 @@
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\CobradorController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\PagoController.cs" />
     <Compile Include="Controllers\PrestamoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

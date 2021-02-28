@@ -27,7 +27,7 @@ namespace Pagadiario.Datos.Dal
         public List<PrestamoDto> SeleccionarTodos()
         {
             lstPrestamoModel = new List<PrestamoDto>();
-            string query = "SELECT * FROM PrestamoView";
+            string query = "SELECT * FROM PrestamoView ORDER BY PrestamoId DESC";
 
             using (conexion = new SqlConnection(cadenaConexion))
             {
@@ -66,7 +66,7 @@ namespace Pagadiario.Datos.Dal
 
         public int Actualizar(PrestamoModel prestamoModel)
         {
-            string query = "UPDATE Prestamo SET No=@No, Fecha=@Fecha, Monto=@Monto=@Monto, Interes=@Interes, FormaPago=@FormaPago, FechaLimite=@FechaLimite, TotalPagar=@TotalPagar, Notas=@Notas, Activo=@Activo, ClienteId=@ClienteId WHERE PrestamoId=@PrestamoId";
+            string query = "UPDATE Prestamo SET No=@No, Fecha=@Fecha, Monto=@Monto, Interes=@Interes, FormaPago=@FormaPago, FechaLimite=@FechaLimite, TotalPagar=@TotalPagar, Notas=@Notas, Activo=@Activo, ClienteId=@ClienteId WHERE PrestamoId=@PrestamoId";
 
             using (conexion = new SqlConnection(cadenaConexion))
             {

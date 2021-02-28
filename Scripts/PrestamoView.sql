@@ -1,22 +1,23 @@
-Create ViEW PrestamoView
+Create ViEW [dbo].[PrestamoView]
 AS
 SELECT 
 	   Cliente.Cedula AS [CC Cliente], 
 	   Cliente.Nombres, 
 	   Cliente.Telefono, 
 	   Cliente.Celular, 
-	   Cliente.Direccion, 
-	   Prestamo.No, 
+	   Cliente.Direccion,
+	   Prestamo.PrestamoId,
+	   Prestamo.No, 
 	   Prestamo.Fecha, 
 	   Prestamo.FechaLimite, 
 	   DATEDIFF(DAY, Prestamo.Fecha, Prestamo.FechaLimite) AS Tiempo, 
 	   Prestamo.Monto, 
 	   Prestamo.Interes, 
 	   Prestamo.FormaPago, 
-	   Prestamo.TotalPagar / (DATEDIFF(DAY,Prestamo.Fecha, Prestamo.FechaLimite)) AS cuota_diaria, 
+	   Prestamo.TotalPagar / (DATEDIFF(DAY,Prestamo.Fecha, Prestamo.FechaLimite)) AS Cuota, 
 	   Prestamo.TotalPagar, 
-	   SUM(Pagos.Pago) AS totalAbono, 
-	   (Prestamo.Monto - SUM(Pagos.Pago)) AS saldo 
+	   SUM(Pagos.Pago) AS TotalPagos, 
+	   (Prestamo.Monto - SUM(Pagos.Pago)) AS Saldo 
 
 FROM 
 	Cliente INNER JOIN Prestamo
@@ -30,7 +31,8 @@ GROUP BY
 	Cliente.Nombres, 
 	Cliente.Telefono, 
 	Cliente.Celular, 
-	Cliente.Direccion, 
+	Cliente.Direccion,
+	Prestamo.PrestamoId,
 	Prestamo.No, 
 	Prestamo.Fecha, 
 	Prestamo.Monto, 
@@ -39,4 +41,4 @@ GROUP BY
 	Prestamo.FechaLimite, 
 	Prestamo.TotalPagar
 
-HAVING Prestamo.TotalPagar> 0;
+HAVING Prestamo.TotalPagar> 0

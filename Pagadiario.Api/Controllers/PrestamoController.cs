@@ -23,13 +23,20 @@ namespace Pagadiario.Api.Controllers
             return prestamoBll.SeleccionarTodos();
         }
 
-
         [HttpPost]
         [Route("Insertar")]
         public int Insertar(PrestamoModel prestamoModel)
         {
             prestamoBll = new PrestamoBll();
             return prestamoBll.Insertar(prestamoModel);
+        }
+         
+        [HttpPut]
+        [Route("Actualizar")]
+        public int Actualizar(PrestamoModel prestamoModel)
+        {
+            prestamoBll = new PrestamoBll();
+            return prestamoBll.Actualizar(prestamoModel);
         }
 
     }

@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Bll\ClienteBll.cs" />
     <Compile Include="Bll\CobradorBll.cs" />
+    <Compile Include="Bll\PagoBll.cs" />
     <Compile Include="Bll\PrestamoBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
