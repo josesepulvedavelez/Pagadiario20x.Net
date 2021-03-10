@@ -14,7 +14,7 @@ namespace Pagadiario.Modelos.Modelos
         public string Notas { get; set; }
         public bool Activo { get; set; }
         public int PrestamoId { get; set; }
-        public int CobradorId { get; set; }
+        public int CobradorId { get; set; }        
         public int PagoId { get; set; }
     }
 }

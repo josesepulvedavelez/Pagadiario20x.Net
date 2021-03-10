@@ -22,6 +22,22 @@ namespace Pagadiario.Api.Controllers
             return clienteBll.SeleccionarTodos();
         }
 
+        [HttpGet]
+        [Route("SeleccionarTodosActivos")]
+        public List<ClienteModel> SeleccionarTodosActivos()
+        {
+            clienteBll = new ClienteBll();
+            return clienteBll.SeleccionarTodosActivos();
+        }
+
+        [HttpGet]
+        [Route("SeleccionarTodosInactivos")]
+        public List<ClienteModel> SeleccionarTodosInactivos()
+        {
+            clienteBll = new ClienteBll();
+            return clienteBll.SeleccionarTodosInactivos();
+        }
+
         [HttpPost]
         [Route("Insertar")]
         public int Insertar([FromBody] ClienteModel clienteModel)

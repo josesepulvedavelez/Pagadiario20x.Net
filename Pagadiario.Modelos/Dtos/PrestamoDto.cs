@@ -25,5 +25,6 @@ namespace Pagadiario.Modelos.Dtos
         public double TotalPagar { get; set; }
         public double TotalPagos { get; set; }
         public double Saldo { get; set; }
+        public bool Activo { get; set; }
     }
 }

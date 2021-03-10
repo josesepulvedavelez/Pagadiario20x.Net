@@ -23,6 +23,22 @@ namespace Pagadiario.Api.Controllers
             return prestamoBll.SeleccionarTodos();
         }
 
+        [HttpGet]
+        [Route("SeleccionarTodosActivos")]
+        public List<PrestamoDto> SeleccionarTodosActivos()
+        {
+            prestamoBll = new PrestamoBll();
+            return prestamoBll.SeleccionarTodosActivos();
+        }
+
+        [HttpGet]
+        [Route("SeleccionarTodosInactivos")]
+        public List<PrestamoDto> SeleccionarTodosInactivos()
+        {
+            prestamoBll = new PrestamoBll();
+            return prestamoBll.SeleccionarTodoInactivos();
+        }
+
         [HttpPost]
         [Route("Insertar")]
         public int Insertar(PrestamoModel prestamoModel)

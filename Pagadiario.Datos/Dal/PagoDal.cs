@@ -39,6 +39,34 @@ namespace Pagadiario.Datos.Dal
             return lstPagoModel;
         }
 
+        public List<PagoDto> SeleccionarTodosActivos()
+        {
+            lstPagoModel = new List<PagoDto>();
+            string query = "SELECT * FROM PagosView WHERE Activo = 'True'";
+
+            using (conexion = new SqlConnection(cadenaConexion))
+            {
+                conexion.Open();
+                lstPagoModel = conexion.Query<PagoDto>(query).ToList();
+            }
+
+            return lstPagoModel;
+        }
+
+        public List<PagoDto> SeleccionarTodosInactivos()
+        {
+            lstPagoModel = new List<PagoDto>();
+            string query = "SELECT * FROM PagosView WHERE Activo = 'False'";
+
+            using (conexion = new SqlConnection(cadenaConexion))
+            {
+                conexion.Open();
+                lstPagoModel = conexion.Query<PagoDto>(query).ToList();
+            }
+
+            return lstPagoModel;
+        }
+
         public int Insertar(PagoModel pagoModel)
         {
             string query = "INSERT INTO Pagos(Fecha, Pago, ProximoPago, Notas, Activo, PrestamoId, CobradorId) VALUES(@Fecha, @Pago, @ProximoPago, @Notas, @Activo, @PrestamoId, @CobradorId)";

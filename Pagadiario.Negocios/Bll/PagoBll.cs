@@ -23,6 +23,22 @@ namespace Pagadiario.Negocios.Bll
             return lstPagoModel;
         }
 
+        public List<PagoDto> SeleccionarTodosActivos()
+        {
+            pagoDal = new PagoDal();
+            lstPagoModel = pagoDal.SeleccionarTodosActivos();
+
+            return lstPagoModel;
+        }
+
+        public List<PagoDto> SeleccionarTodosInactivos()
+        {
+            pagoDal = new PagoDal();
+            lstPagoModel = pagoDal.SeleccionarTodosInactivos();
+
+            return lstPagoModel;
+        }
+
         public int Insertar(PagoModel pagoModel)
         {
             pagoDal = new PagoDal();

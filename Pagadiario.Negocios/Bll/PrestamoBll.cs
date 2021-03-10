@@ -23,6 +23,22 @@ namespace Pagadiario.Negocios.Bll
             return lstPrestamoModel;
         }
 
+        public List<PrestamoDto> SeleccionarTodosActivos()
+        {
+            prestamoDal = new PrestamoDal();
+            lstPrestamoModel = prestamoDal.SeleccionarTodosActivos();
+
+            return lstPrestamoModel;
+        }
+
+        public List<PrestamoDto> SeleccionarTodoInactivos()
+        {
+            prestamoDal = new PrestamoDal();
+            lstPrestamoModel = prestamoDal.SeleccionarTodosInactivos();
+
+            return lstPrestamoModel;
+        }
+
         public int Insertar(PrestamoModel prestamoModel)
         {
             prestamoDal = new PrestamoDal();

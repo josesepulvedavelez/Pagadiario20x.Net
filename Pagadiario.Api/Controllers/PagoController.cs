@@ -23,6 +23,22 @@ namespace Pagadiario.Api.Controllers
             return pagoBll.SeleccionarTodos();
         }
 
+        [HttpGet]
+        [Route("SeleccionarTodosActivos")]
+        public List<PagoDto> SeleccionarTodosActivos()
+        {
+            pagoBll = new PagoBll();
+            return pagoBll.SeleccionarTodosActivos();
+        }
+
+        [HttpGet]
+        [Route("SeleccionarTodosInactivos")]
+        public List<PagoDto> SeleccionarTodosInactivos()
+        {
+            pagoBll = new PagoBll();
+            return pagoBll.SeleccionarTodosInactivos();
+        }
+
         [HttpPost]
         [Route("Insertar")]
         public int Insertar(PagoModel pagoModel)

@@ -38,6 +38,34 @@ namespace Pagadiario.Datos.Dal
             return lstPrestamoModel;
         }
 
+        public List<PrestamoDto> SeleccionarTodosActivos()
+        {
+            lstPrestamoModel = new List<PrestamoDto>();
+            string query = "SELECT * FROM PrestamoView WHERE Activo = 'True' ORDER BY PrestamoId DESC";
+
+            using (conexion = new SqlConnection(cadenaConexion))
+            {
+                conexion.Open();
+                lstPrestamoModel = conexion.Query<PrestamoDto>(query).ToList();
+            }
+
+            return lstPrestamoModel;
+        }
+
+        public List<PrestamoDto> SeleccionarTodosInactivos()
+        {
+            lstPrestamoModel = new List<PrestamoDto>();
+            string query = "SELECT * FROM PrestamoView WHERE Activo = 'False' ORDER BY PrestamoId DESC";
+
+            using (conexion = new SqlConnection(cadenaConexion))
+            {
+                conexion.Open();
+                lstPrestamoModel = conexion.Query<PrestamoDto>(query).ToList();
+            }
+
+            return lstPrestamoModel;
+        }
+
         public int Insertar(PrestamoModel prestamoModel)
         {
             string query = "INSERT INTO Prestamo(No, Fecha, Monto, Interes, FormaPago, FechaLimite, TotalPagar, Notas, Activo, ClienteId) VALUES(@No, @Fecha, @Monto, @Interes, @FormaPago, @FechaLimite, @TotalPagar, @Notas, @Activo, @ClienteId)";

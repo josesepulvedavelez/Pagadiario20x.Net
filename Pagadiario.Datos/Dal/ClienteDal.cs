@@ -37,6 +37,34 @@ namespace Pagadiario.Datos.Dal
             return lstClienteModel;
         }
 
+        public List<ClienteModel> SeleccionarTodosActivos()
+        {
+            lstClienteModel = new List<ClienteModel>();
+            string query = "SELECT * FROM Cliente WHERE Activo = 'True' ";
+
+            using (conexion = new SqlConnection(cadenaConexion))
+            {
+                conexion.Open();
+                lstClienteModel = conexion.Query<ClienteModel>(query).ToList();
+            }
+
+            return lstClienteModel;
+        }
+
+        public List<ClienteModel> SeleccionarTodosInactivos()
+        {
+            lstClienteModel = new List<ClienteModel>();
+            string query = "SELECT * FROM Cliente WHERE Activo = 'False' ";
+
+            using (conexion = new SqlConnection(cadenaConexion))
+            {
+                conexion.Open();
+                lstClienteModel = conexion.Query<ClienteModel>(query).ToList();
+            }
+
+            return lstClienteModel;
+        }
+
         public int Insertar(ClienteModel clienteModel)
         {
             string query = "INSERT INTO Cliente(Cedula, Nombres, Telefono, Celular, Direccion, Notas, Activo) VALUES(@Cedula, @Nombres, @Telefono, @Celular, @Direccion, @Notas, @Activo)";

@@ -22,6 +22,22 @@ namespace Pagadiario.Negocios.Bll
             return lstClienteModel;
         }
 
+        public List<ClienteModel> SeleccionarTodosActivos()
+        {
+            clienteDal = new ClienteDal();
+            lstClienteModel = clienteDal.SeleccionarTodosActivos();
+
+            return lstClienteModel;
+        }
+
+        public List<ClienteModel> SeleccionarTodosInactivos()
+        {
+            clienteDal = new ClienteDal();
+            lstClienteModel = clienteDal.SeleccionarTodosInactivos();
+
+            return lstClienteModel;
+        }
+
         public int Insertar(ClienteModel clienteModel)
         {
             clienteDal = new ClienteDal();
